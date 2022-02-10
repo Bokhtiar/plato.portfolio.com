@@ -1,0 +1,26 @@
+img{
+    width: 100%;
+    height: 400px;
+}
+.title{
+    font-size: 30px;
+}
+.blog-info {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.blog-info > li {
+    float: left;
+  }
+
+.blog-info > li > a{
+    color: black;
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+}
+.btn{
+    background-color: #D35400;
+    color: white;
+}

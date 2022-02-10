@@ -1,17 +1,26 @@
 import Index from "./Components/Portfolio/Index";
 import Footer from "./Partial/Footer";
 import Navbar from "./Partial/Navbar";
+import BlogList from "./Components/Blog/BlogList";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-    {/*Navbar*/}
-    <Navbar />  
-    {/*main container start here*/}
-    <Index />
-    {/*main content end here*/}
-     {/* FOOTER  */}
-    <Footer />
+    <BrowserRouter>    
+        {/*Navbar*/}
+        <Navbar />  
+          <Routes>
+            <Route path="/" element={<Index />}></Route>
+            <Route path="/blog" element={<BlogList/>}></Route>
+          </Routes>
+        {/* FOOTER  */}
+        <Footer />
+    </BrowserRouter>     
     </div>
   );
 }

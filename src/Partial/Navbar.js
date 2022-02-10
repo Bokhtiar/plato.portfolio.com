@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, Nav } from 'react-router-dom'
 
 export default function () {
   return (
@@ -27,6 +28,9 @@ export default function () {
                     </li>
                     <li className="nav-item">
                         <a href="#contact" className="nav-link"><span data-hover="Contact">Contact</span></a>
+                    </li>
+                    <li className="nav-item">
+                    <Link to={"/blog"} className="nav-link"><span data-hover="Blog">Blog</span></Link>
                     </li>
                 </ul>
 
