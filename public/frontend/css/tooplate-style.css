@@ -46,7 +46,10 @@ a:hover {
 .navbar-brand .uil {
   font-size: 40px;
 }
-
+.navbar-image{
+  height: 60px;
+  width: 80px;
+}
 p {
   font-size: 18px;
   font-weight: 300;
@@ -166,7 +169,7 @@ b, strong {
   }
 }
 .navbar {
-  position: fixed;
+position:absolute;
   top: 0;
   right: 0;
   left: 0;

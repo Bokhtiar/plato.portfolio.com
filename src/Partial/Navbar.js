@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link, Nav } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function () {
   return (
     <div>
         <nav className="navbar navbar-expand-sm navbar-light">
         <div className="container">
-            <Link className="navbar-brand" to={"/"}><i className='uil uil-user'></i> Marvel</Link>
+            <Link className="navbar-brand" to={"/"}> <img className='navbar-image' src="./frontend/images/logo.jpg"  alt="svg image"/>  <span className="text-success">Bokhtiar</span> <span>Toshar</span> </Link>
 
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -16,7 +16,7 @@ export default function () {
             </button>
 
             <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav mx-auto">
+                <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
                         <a href="#about" className="nav-link"><span data-hover="About">About</span></a>
                     </li>
@@ -32,15 +32,6 @@ export default function () {
                     <li className="nav-item">
                     <Link to={"/blog"} className="nav-link"><span data-hover="Blog">Blog</span></Link>
                     </li>
-                </ul>
-
-                <ul className="navbar-nav ml-lg-auto">
-                    <div className="ml-lg-4">
-                    <div className="color-mode d-lg-flex justify-content-center align-items-center">
-                        <i className="color-mode-icon"></i>
-                        Color mode
-                    </div>
-                    </div>
                 </ul>
             </div>
         </div>

@@ -11,16 +11,20 @@ import {
 function App() {
   return (
     <div className="App">
-    <BrowserRouter>    
-        {/*Navbar*/}
-        <Navbar />  
-          <Routes>
-            <Route path="/" element={<Index />}></Route>
-            <Route path="/blog" element={<BlogList/>}></Route>
-          </Routes>
-        {/* FOOTER  */}
-        <Footer />
-    </BrowserRouter>     
+
+      <BrowserRouter>    
+
+          {/*Navbar*/}
+          <Navbar />  
+            <Routes>
+              <Route path="/" element={<Index />}></Route>
+              <Route path="/blog" element={<BlogList/>}></Route>
+            </Routes>
+          {/* FOOTER  */}
+          <Footer />
+
+      </BrowserRouter>     
+    
     </div>
   );
 }
