@@ -5,89 +5,38 @@ export default function Index() {
     <div>
  
         {/* ABOUT  */}
-        <div className='row justify-content-center'>
-                <div className='col-md-9'>
-                    <section className="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
-                        <div className="container">
-                            <div className="row">
-                                
-                                <div className="col-lg-8 col-md-12 col-12 d-flex align-items-center">
-                                    <div className="about-text">
-                                        <small className="small-text">Welcome to <span className="mobile-block">my portfolio website!</span></small>
-                                        <h1 className="animated animated-text">
-                                            <span className="mr-2">Hey folks, I'm</span>
-                                                <div className="animated-info">
-                                                    <span className="animated-item">Marvel Sann</span>
-                                                    <span className="animated-item">Web Designer</span>
-                                                    <span className="animated-item">UI Specialist</span>
-                                                </div>
-                                        </h1>
-
-                                        <p>Building a successful product is a challenge. I am highly energetic in user experience design, interfaces and web development.</p>
-                                        
-                                        <div className="custom-btn-group mt-4">
-                                            <a href="#" className="btn mr-lg-2 custom-btn"><i className='uil uil-file-alt'></i> Download Resume</a>
-                                            <a href="#contact" className="btn custom-btn custom-btn-bg custom-btn-link">Get a free quote</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-4 col-md-12 col-12">
-                                    <div className="about-image svg">
-                                        <img src="./frontend/images/logo.jpg" className="img-fluid" alt="svg image"/>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-                 </div>
-        </div>
-            {/* PROJECTS  */}
-        <section className="project py-5" id="project">
+        <section className="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
             <div className="container">
+                <div className="row">
                     
-                    <div className="row">
-                        <div className="col-lg-11 text-center mx-auto col-12">
+                    <div className="col-lg-8 col-md-12 col-12 d-flex align-items-center">
+                        <div className="about-text">
+                            <small className="small-text">Welcome to <span className="mobile-block">my portfolio website!</span></small>
+                            <h1 className="animated animated-text">
+                                <span className="mr-2">Hey folks, I'm</span>
+                                    <div className="animated-info">
+                                        <span className="animated-item">Marvel Sann</span>
+                                        <span className="animated-item">Web Designer</span>
+                                        <span className="animated-item">UI Specialist</span>
+                                    </div>
+                            </h1>
 
-                            <div className="col-lg-8 mx-auto">
-                            <h2>Things I have designed for digital media agencies</h2>
+                            <p>Building a successful product is a challenge. I am highly energetic in user experience design, interfaces and web development.</p>
+                            
+                            <div className="custom-btn-group mt-4">
+                                <a href="#" className="btn mr-lg-2 custom-btn"><i className='uil uil-file-alt'></i> Download Resume</a>
+                                <a href="#contact" className="btn custom-btn custom-btn-bg custom-btn-link">Get a free quote</a>
                             </div>
-
-                            <div className="owl-carousel owl-theme">
-                            <div className="item">
-                                <div className="project-info">
-                                <img src="./frontend/images/project/project-image01.png" className="img-fluid" alt="project image"/>
-                                </div>
-                            </div>
-
-                            <div className="item">
-                                <div className="project-info">
-                                <img src="./frontend/images/project/project-image02.png" className="img-fluid" alt="project image"/>
-                                </div>
-                            </div>
-
-                            <div className="item">
-                                <div className="project-info">
-                                <img src="./frontend/images/project/project-image03.png" className="img-fluid" alt="project image"/>
-                                </div>
-                            </div>
-
-                            <div className="item">
-                                <div className="project-info">
-                                <img src="./frontend/images/project/project-image04.png" className="img-fluid" alt="project image"/>
-                                </div>
-                            </div>
-
-                            <div className="item">
-                                <div className="project-info">
-                                <img src="./frontend/images/project/project-image05.png" className="img-fluid" alt="project image"/>
-                                </div>
-                            </div>
-                            </div>
-
                         </div>
                     </div>
+
+                    <div className="col-lg-4 col-md-12 col-12">
+                        <div className="about-image svg">
+                            <img src="./frontend/images/logo.jpg" className="img-fluid" alt="svg image"/>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
 
@@ -99,10 +48,12 @@ export default function Index() {
                     <div className="col-lg-6 col-12">
                         <h2 className="mb-4">Experiences</h2>
 
+
+
                         <div className="timeline">
                             <div className="timeline-wrapper">
                                 <div className="timeline-yr">
-                                        <span>2019</span>
+                                        <span> <img className='icon-expe' src="./frontend/images/logo.jpg"  alt="svg image"/>   </span>
                                 </div>
                                 <div className="timeline-info">
                                         <h3><span>Project Manager</span><small>Best Studio</small></h3>
@@ -112,7 +63,7 @@ export default function Index() {
 
                             <div className="timeline-wrapper">
                                 <div className="timeline-yr">
-                                    <span>2018</span>
+                                    <span><img className='icon-expe' src="./frontend/img/web.png"  alt="svg image"/></span>
                                 </div>
                                 <div className="timeline-info">
                                     <h3><span>UX Designer</span><small>Digital Ace</small></h3>

@@ -18,7 +18,7 @@ export default function () {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <a href="#about" className="nav-link"><span data-hover="About">About</span></a>
+                        <Link to={"about"} className="nav-link"><span data-hover="About">About</span></Link>
                     </li>
                     <li className="nav-item">
                         <a href="#project" className="nav-link"><span data-hover="Projects">Projects</span></a>
