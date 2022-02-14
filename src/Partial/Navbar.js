@@ -24,7 +24,7 @@ export default function () {
                         <a href="#project" className="nav-link"><span data-hover="Projects">Projects</span></a>
                     </li>
                     <li className="nav-item">
-                        <a href="#resume" className="nav-link"><span data-hover="Resume">Resume</span></a>
+                        <Link to={"resume"} className="nav-link"><span data-hover="Resume">Resume</span></Link>
                     </li>
                     <li className="nav-item">
                         <a href="#contact" className="nav-link"><span data-hover="Contact">Contact</span></a>
