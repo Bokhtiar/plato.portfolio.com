@@ -244,9 +244,7 @@ export default function Index() {
         </div>
 
       </div>
-    </section>
-       
-
+        </section>
         {/* contact */}
 
 

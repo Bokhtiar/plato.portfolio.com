@@ -10,6 +10,7 @@ import BlogList from "./Components/Blog/BlogList";
 import SingleBlog from "./Components/Blog/SingleBlog";
 import About from "./Components/Portfolio/About/About";
 import Resume from "./Components/Portfolio/Resume/Resume";
+import Project from "./Components/Portfolio/Project/Project";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               <Route path="/blog/detail/:id" element={ <SingleBlog /> }></Route>
               <Route path="/about" element={ <About  /> }></Route>
               <Route path="/resume" element={ <Resume /> }></Route>
+              <Route path="/project" element={ <Project  /> }></Route>
             </Routes>
           {/* FOOTER  */}
           <Footer />
