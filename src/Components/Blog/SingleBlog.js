@@ -1,6 +1,23 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
+import {  useParams } from 'react-router-dom'
+import axios from "axios";
+import { getServiceSingleBlog } from '../../Service/Blog';
 
 export default function SingleBlog() {
+    const {id} = useParams()
+    const [blog, setBlog] = useState([])
+
+    	useEffect(() => {
+		ServiceSingleBlog();
+	}, [])
+
+    const ServiceSingleBlog = async()=> {
+        const singleBlog = await getServiceSingleBlog(id);
+        console.log('UI',singleBlog)
+        setBlog(singleBlog)
+    }
+    console.log(blog.title)
+	
   return (
     <div>
         <section id="blog" className="blog">
@@ -15,9 +32,10 @@ export default function SingleBlog() {
                 <div className="entry-img">
                 <img src="assets/img/blog/blog-1.jpg" alt="" className="img-fluid"/>
                 </div>
-
+                    
                 <h2 className="entry-title">
-                <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+ 
+        <a href="blog-single.html">{blog.title}</a>
                 </h2>
 
                 <div className="entry-meta">

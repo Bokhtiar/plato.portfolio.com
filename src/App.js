@@ -22,7 +22,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Index />}></Route>
               <Route path="/blog" element={<BlogList/>}></Route>
-              <Route path="/blog/detail" element={ <SingleBlog /> }></Route>
+              <Route path="/blog/detail/:id" element={ <SingleBlog /> }></Route>
               <Route path="/about" element={ <About  /> }></Route>
               <Route path="/resume" element={ <Resume /> }></Route>
             </Routes>
