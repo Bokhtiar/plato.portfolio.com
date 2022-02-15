@@ -1,7 +1,19 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
+import React, {useState, useEffect} from 'react'
+import axios from "axios";
+import { getServiceBlogData } from '../../Service/Blog';
 
 export default function BlogList() {
+  const [Blogs, setBlog] = useState([])
+    useEffect(() => {
+      BlogListData();
+    }, []);
+
+  const BlogListData = async()=>{
+    const ServiceBlogList = await getServiceBlogData();
+    setBlog(ServiceBlogList)
+  }
+
   return (
     <div>
       <section id="blog" className="blog">
@@ -11,68 +23,40 @@ export default function BlogList() {
 
         <div className="col-lg-8 entries">
 
-        <article className="entry">
+      {
+          Blogs.map((blog, index)=>
+              <article className="entry">
 
-          <div className="entry-img">
-            <img src="./frontend/images/blog1.png" alt="" className=""/>
-          </div>
-
-          <h2 className="entry-title">
-            <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
-          </h2>
-
-          <div className="entry-meta">
-            <ul>
-              <li className="d-flex align-items-center"><i className="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-              <li className="d-flex align-items-center"><i className="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-              <li className="d-flex align-items-center"><i className="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
-            </ul>
-          </div>
-
-          <div className="entry-content">
-            <p>
-              Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
-              Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
-            </p>
-            <div className="read-more">
-              <Link to={"/blog/detail"}>Read More</Link>
-            </div>
-          </div>
-
-        </article>
-
-
-
-        <article classNameName="entry">
-
-          <div className="entry-img">
-            <img src="assets/img/blog/blog-4.jpg" alt="" className="img-fluid"/>
-          </div>
-
-          <h2 className="entry-title">
-            <a href="blog-single.html">Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.</a>
-          </h2>
-
-          <div className="entry-meta">
-            <ul>
-              <li className="d-flex align-items-center"><i className="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-              <li className="d-flex align-items-center"><i className="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-              <li className="d-flex align-items-center"><i className="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
-            </ul>
-          </div>
-
-          <div className="entry-content">
-            <p>
-              Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum enim et autem. Saepe atque cum eligendi eaque iste omnis a qui.
-              Quia sed sunt. Ea asperiores expedita et et delectus voluptates rerum. Id saepe ut itaque quod qui voluptas nobis porro rerum. Quam quia nesciunt qui aut est non omnis. Inventore occaecati et quaerat magni itaque nam voluptas. Voluptatem ducimus sint id earum ut nesciunt sed corrupti nemo.
-            </p>
-            <div className="read-more">
-              <a href="blog-single.html">Read More</a>
-            </div>
-          </div>
-
-        </article>
-
+              <div className="entry-img">
+                <img src="./frontend/images/blog1.png" alt="" className=""/>
+              </div>
+      
+              <h2 className="entry-title">
+                <a href="blog-single.html">{blog.title}</a>
+              </h2>
+      
+              <div className="entry-meta">
+                <ul>
+                  <li className="d-flex align-items-center"><i className="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                  <li className="d-flex align-items-center"><i className="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li className="d-flex align-items-center"><i className="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
+                </ul>
+              </div>
+      
+              <div className="entry-content">
+                <p>
+                  Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
+                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                </p>
+                <div className="read-more">
+                  <Link to={"/blog/detail"}>Read More</Link>
+                </div>
+              </div>
+      
+              </article>
+          )
+      }
+        
         <div className="blog-pagination">
           <ul className="justify-content-center">
             <li><a href="#">1</a></li>
@@ -89,8 +73,8 @@ export default function BlogList() {
 
               <h3 className="sidebar-title">Search</h3>
               <div className="sidebar-item search-form">
-                <form action="" classNameName='form-inline'>
-                  <input classNameName='form-control' type="text"/>
+                <form action="" className='form-inline'>
+                  <input className='form-control' type="text"/>
                   <button type="submit"><i className="bi bi-search"></i></button>
                 </form>
               </div>
