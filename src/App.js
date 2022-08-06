@@ -20,8 +20,9 @@ function App() {
   return (
     <div className="App">
 
-      <BrowserRouter>    
+      <BrowserRouter>     
       <Routes>
+        
           {/* no protected route start */}
           <Route path="/" element={<InnerContent />}>
               <Route path="/" element={<Index />} />
@@ -39,10 +40,6 @@ function App() {
             <Route path="/" element={<AdminInnerContent />}>
               <Route path="/" element={<Navigate replace to="admin/dashboard" />} />
               <Route path="admin/dashboard" element={<DashboardHome />} />
-              {/* category start */}
-              {/* <Route path="admin/category" element={<CategoryList />} />
-              <Route path="admin/category/create" element={<CategoryCreate />} /> */}
-          
             </Route>
           </Route>
 
