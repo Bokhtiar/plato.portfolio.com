@@ -1,7 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 export default function Index() {
   return (
+    
     <div>
         {/* ABOUT  */}
         <section className="about full-screen d-lg-flex justify-content-center align-items-center" id="about">

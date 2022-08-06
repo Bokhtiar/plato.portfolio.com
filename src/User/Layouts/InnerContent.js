@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom'
 const InnerContent = () => {
     return (
         <section>
-             <Navbar />  
+             <Navbar /> 
                 <Outlet/>
             <Footer />  
         </section>
