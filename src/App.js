@@ -11,6 +11,7 @@ import About from "./User/About/About";
 import Resume from "./User/Resume/Resume";
 
 import InnerContent from "./User/Layouts/InnerContent"; //this layout for user
+import AdminInnerContent from "./Admin/Layouts/AdminInnerContent"; //this layout for admin
 import ProtectedRoutes from './Admin/Layouts/ProtectedRoute';
 import AdminLogin from "./Admin/Auth/Login";
 import DashboardHome from "./Admin/Dashboard/DashboardHome";
@@ -35,7 +36,7 @@ function App() {
 
            {/** admin Routes */}
            <Route path="/" element={<ProtectedRoutes />}>
-            <Route path="/" element={<InnerContent />}>
+            <Route path="/" element={<AdminInnerContent />}>
               <Route path="/" element={<Navigate replace to="admin/dashboard" />} />
               <Route path="admin/dashboard" element={<DashboardHome />} />
               {/* category start */}
