@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getServiceResumData, getServiceResumProfessionData } from '../../../Service/resume'
+import { getServiceResumData, getServiceResumProfessionData } from '../../Service/resume'
 
 export default function Index() {
 

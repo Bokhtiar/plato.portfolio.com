@@ -3,14 +3,14 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Index from "./Components/Portfolio/Index";
-import Footer from "./Partial/Footer";
-import Navbar from "./Partial/Navbar";
-import BlogList from "./Components/Blog/BlogList";
-import SingleBlog from "./Components/Blog/SingleBlog";
-import About from "./Components/Portfolio/About/About";
-import Resume from "./Components/Portfolio/Resume/Resume";
-import Project from "./Components/Portfolio/Project/Project";
+import Index from "./User/UserHome";
+import Footer from "./User/Layouts/Partial/Footer";
+import Navbar from "./User/Layouts/Partial/Navbar";
+import BlogList from "./User/Blog/BlogList";
+import SingleBlog from "./User/Blog/SingleBlog";
+import About from "./User/About/About";
+import Resume from "./User/Resume/Resume";
+import Project from "./User/Project/Project";
 
 function App() {
   return (
