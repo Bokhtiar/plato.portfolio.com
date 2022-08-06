@@ -11,26 +11,25 @@ import SingleBlog from "./User/Blog/SingleBlog";
 import About from "./User/About/About";
 import Resume from "./User/Resume/Resume";
 import Project from "./User/Project/Project";
+import InnerContent from "./User/Layouts/InnerContent";
 
 function App() {
   return (
     <div className="App">
 
       <BrowserRouter>    
-
-          {/*Navbar*/}
-          <Navbar />  
-            <Routes>
-              <Route path="/" element={<Index />}></Route>
+      <Routes>
+    
+          <Route path="/" element={<InnerContent />}>
+              <Route path="/" element={<Index />} />
               <Route path="/blog" element={<BlogList/>}></Route>
               <Route path="/blog/detail/:id" element={ <SingleBlog /> }></Route>
               <Route path="/about" element={ <About  /> }></Route>
               <Route path="/resume" element={ <Resume /> }></Route>
               <Route path="/project" element={ <Project  /> }></Route>
-            </Routes>
-          {/* FOOTER  */}
-          <Footer />
+          </Route>
 
+        </Routes>
       </BrowserRouter>     
     
     </div>
