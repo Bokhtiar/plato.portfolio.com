@@ -3,6 +3,7 @@ import React from 'react'
 export default function Index() {
   return (
     <div>
+      test stest
  
         {/* ABOUT  */}
         <section className="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
