@@ -17,6 +17,7 @@ import AdminLogin from "./Admin/Auth/Login";
 import DashboardHome from "./Admin/Dashboard/DashboardHome";
 import WebSetting from './Admin/Dashboard/WebSetting/WebSetting'
 import WebSettingList from "./Admin/Dashboard/WebSetting/websettingList";
+import ResumeList from "./Admin/Dashboard/Resume/List";
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
               <Route path="admin/dashboard" element={<DashboardHome />} />
               <Route path="web-setting" element={<WebSetting />} />
               <Route path="web-setting-list" element={<WebSettingList />} />
+              <Route path="admin/resume" element={<ResumeList />} />
               
             </Route>
           </Route>

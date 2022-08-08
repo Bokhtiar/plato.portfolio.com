@@ -14,6 +14,12 @@ const AdminSidebar = () => {
                         </a>
                     </li>
 
+                    <li className="nav-item">
+                        <Link className="nav-link collapsed" to="/admin/resume">
+                            <i className="bi bi-file-earmark"></i>
+                            <span>Resume</span>
+                        </Link>
+                    </li>
 
                     <li className="nav-item">
                         <Link className="nav-link collapsed" to="web-setting">
