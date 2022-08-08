@@ -1,9 +1,24 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { getWebSettingSingleData } from '../Service/WebSetting'
 import ContactCreate from './Contact/Create'
+import { useState, useEffect } from 'react'
 
 
 export default function Index() {
+
+
+  const [webSetting, setWebSetting] = useState([])
+
+  const webSettingSingleData = async() =>{
+      const data = await getWebSettingSingleData()
+      setWebSetting(data)
+  }
+  useEffect(()=>{
+      webSettingSingleData()
+  },[])
+
+
   return (
     
     <div>
@@ -14,17 +29,17 @@ export default function Index() {
                     
                     <div className="col-lg-8 col-md-12 col-12 d-flex align-items-center">
                         <div className="about-text">
-                            <small className="small-text">Welcome to <span className="mobile-block">my portfolio website!</span></small>
+                            <small className="small-text">{webSetting.heading1}</small>
                             <h1 className="animated animated-text">
                                 <span className="mr-2">Hey folks, I'm</span>
                                     <div className="animated-info">
-                                        <span className="animated-item">Marvel Sann</span>
-                                        <span className="animated-item">Web Designer</span>
-                                        <span className="animated-item">UI Specialist</span>
+                                        <span className="animated-item" style={{ fontSize: "22px" }}>Bokhtiar Toshar</span>
+                                        <span className="animated-item" style={{ fontSize: "22px" }}>Full Stack Laravel Developer</span>
+                                        <span className="animated-item" style={{ fontSize: "22px" }}>Mern Stack Developer</span>
                                     </div>
                             </h1>
 
-                            <p>Building a successful product is a challenge. I am highly energetic in user experience design, interfaces and web development.</p>
+                            <p>{webSetting.text}.</p>
                             
                             <div className="custom-btn-group mt-4">
                                 <a href="#" className="btn mr-lg-2 custom-btn"><i className='uil uil-file-alt'></i> Download Resume</a>
@@ -35,7 +50,7 @@ export default function Index() {
 
                     <div className="col-lg-4 col-md-12 col-12">
                         <div className="about-image svg">
-                            <img src="../Layouts/images/logo.jpg" className="img-fluid" alt="svg image"/>
+                            <img src={webSetting.image} className="img-fluid" alt="svg image"/>
                         </div>
                     </div>
 

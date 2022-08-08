@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { getWebSettingSingleData } from '../../../Service/WebSetting'
 
 export default function () {
-  return (
+
+    const [webSetting, setWebSetting] = useState([])
+
+    const webSettingSingleData = async() =>{
+        const data = await getWebSettingSingleData()
+        setWebSetting(data)
+    }
+    useEffect(()=>{
+        webSettingSingleData()
+    },[])
+
+  return ( 
     <div>
         <nav className="navbar navbar-expand-sm navbar-light">
         <div className="container">
-            <Link className="navbar-brand" to={"/"}> <img className='navbar-image' src="./frontend/images/logo.jpg"  alt="svg image"/>  <span className="text-success">Bokhtiar</span> <span>Toshar</span> </Link>
+            <Link className="navbar-brand" to={"/"}> <img className='navbar-image' src={webSetting.logo}  alt="svg image"/> {webSetting.name}  </Link>
 
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
