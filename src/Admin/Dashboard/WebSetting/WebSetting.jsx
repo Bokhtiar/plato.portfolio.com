@@ -40,9 +40,9 @@ const WebSetting = () => {
         await axios.post('/admin/websetting', formData)
                     .then(({data})=>{
                         console.log(data.message)
-                        navigate("/websetting/list")
-                    }).catch((res)=> {
-                        console.log(res.data.message)
+                        navigate("/web-setting-list")
+                    }).catch((error)=> {
+                        console.log(error.data)
                     })
         
 
