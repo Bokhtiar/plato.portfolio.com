@@ -44,6 +44,7 @@ function App() {
               <Route path="admin/dashboard" element={<DashboardHome />} />
               <Route path="web-setting" element={<WebSetting />} />
               <Route path="web-setting-list" element={<WebSettingList />} />
+              
             </Route>
           </Route>
 

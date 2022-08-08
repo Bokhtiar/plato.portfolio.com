@@ -1,20 +1,31 @@
 import { useEffect, useState } from "react"
 import { getServiceWebSettingData } from "../../../Service/WebSetting"
+import {useNavigate, Link } from 'react-router-dom';
+import axios from "axios"
+
 
 const WebSettingList = () => {
-    console.log('tes')
+    const navigate=useNavigate()
+
     const [webSetting, setWebSetting] = useState([''])
 
-    const WebSettingList = async () => {
+    const WebSettingData = async () => {
         const data = await getServiceWebSettingData()
         setWebSetting(data)
     }
 
     useEffect(() => {
-        WebSettingList()
+        WebSettingData()
     }, [])
 
-    console.log('public', webSetting)
+    const webSettingDelete = (id)=>{
+        axios.delete(`/admin/websetting/${id}`).then((res)=>{
+            console.log(res.data)
+            WebSettingData()
+        }).catch((error)=>{
+            console.log(error);
+        })
+    }
 
     return (
         <section>
@@ -28,6 +39,7 @@ const WebSettingList = () => {
                             <div className="row">
                                 <div className="col-md-12 my-3">
                                     <h3>Information</h3>
+                                    <span><strong>id: </strong>{web._id}</span> <br />
                                     <span><strong>Name: </strong>{web.name}</span> <br />
                                     <span><strong>Email: </strong>{web.email}</span> <br />
                                     <span><strong>Location: </strong>{web.location}</span> <br />
@@ -47,6 +59,7 @@ const WebSettingList = () => {
                                 </span><br />
 
                             </div>
+                            <button className="btn btn-danger" onClick={()=>webSettingDelete(web._id)}> Delete </button>
                         </div>
                     )
                 }
