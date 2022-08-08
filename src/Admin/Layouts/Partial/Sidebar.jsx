@@ -1,25 +1,27 @@
+import { Link } from "react-router-dom"
+
 const AdminSidebar = () => {
     return (
         <section>
-            <aside id="sidebar" class="sidebar">
+            <aside id="sidebar" className="sidebar">
 
-                <ul class="sidebar-nav" id="sidebar-nav">
+                <ul className="sidebar-nav" id="sidebar-nav">
 
-                    <li class="nav-item">
-                        <a class="nav-link " href="index.html">
-                            <i class="bi bi-grid"></i>
+                    <li className="nav-item">
+                        <a className="nav-link " href="index.html">
+                            <i className="bi bi-grid"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
 
 
-                    <li class="nav-item">
-                        <a class="nav-link collapsed" href="pages-blank.html">
-                            <i class="bi bi-file-earmark"></i>
-                            <span>Blank</span>
-                        </a>
+                    <li className="nav-item">
+                        <Link className="nav-link collapsed" to="web-setting">
+                            <i className="bi bi-file-earmark"></i>
+                            <span>Web-Settings</span>
+                        </Link>
                     </li>
-
+                    
                 </ul>
 
             </aside>

@@ -6,14 +6,14 @@ import { Outlet } from 'react-router-dom'
 /*links css*/
 
 //import('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i')
-import('./Assets/vendor/bootstrap/css/bootstrap.min.css')
-import('./Assets/vendor/bootstrap-icons/bootstrap-icons.css')
-import('./Assets/vendor/boxicons/css/boxicons.min.css')
-import('./Assets/vendor/quill/quill.snow.css')
-import('./Assets/vendor/quill/quill.bubble.css')
-import('./Assets/vendor/remixicon/remixicon.css')
-import('./Assets/vendor/simple-datatables/style.css')
-import('./Assets/css/style.css')
+//import('../../Admin/Layouts/Assets/vendor/bootstrap/css/bootstrap.min.css')
+import('../../Admin/Layouts/Assets/vendor/bootstrap-icons/bootstrap-icons.css')
+import('../../Admin/Layouts/Assets/vendor/boxicons/css/boxicons.min.css')
+import('../../Admin/Layouts/Assets/vendor/quill/quill.snow.css')
+import('../../Admin/Layouts/Assets/vendor/quill/quill.bubble.css')
+import('../../Admin/Layouts/Assets/vendor/remixicon/remixicon.css')
+import('../../Admin/Layouts/Assets/vendor/simple-datatables/style.css')
+import('../../Admin/Layouts/Assets/css/style.css')
 
 /*links js*/
 

@@ -34,7 +34,7 @@ export default function Index() {
 
                     <div className="col-lg-4 col-md-12 col-12">
                         <div className="about-image svg">
-                            <img src="./frontend/images/logo.jpg" className="img-fluid" alt="svg image"/>
+                            <img src="../Layouts/images/logo.jpg" className="img-fluid" alt="svg image"/>
                         </div>
                     </div>
 

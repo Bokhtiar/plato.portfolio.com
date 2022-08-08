@@ -15,6 +15,8 @@ import AdminInnerContent from "./Admin/Layouts/AdminInnerContent"; //this layout
 import ProtectedRoutes from './Admin/Layouts/ProtectedRoute';
 import AdminLogin from "./Admin/Auth/Login";
 import DashboardHome from "./Admin/Dashboard/DashboardHome";
+import WebSetting from './Admin/Dashboard/WebSetting/WebSetting'
+import WebSettingList from "./Admin/Dashboard/WebSetting/websettingList";
 
 function App() {
   return (
@@ -40,6 +42,8 @@ function App() {
             <Route path="/" element={<AdminInnerContent />}>
               <Route path="/" element={<Navigate replace to="admin/dashboard" />} />
               <Route path="admin/dashboard" element={<DashboardHome />} />
+              <Route path="web-setting" element={<WebSetting />} />
+              <Route path="web-setting-list" element={<WebSettingList />} />
             </Route>
           </Route>
 

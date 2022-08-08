@@ -21,7 +21,7 @@ export default function BlogList() {
         <div className="row">
 
         <div className="col-lg-8 entries">
-
+ 
       {
           Blogs.map((blog, index)=>
               <article className="entry">
