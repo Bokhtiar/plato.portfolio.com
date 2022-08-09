@@ -20,6 +20,7 @@ import WebSettingList from "./Admin/Dashboard/WebSetting/websettingList";
 import ResumeList from "./Admin/Dashboard/Resume/List";
 import ContactList from "./Admin/Dashboard/Contact/List";
 import ContactShow from "./Admin/Dashboard/Contact/Show";
+import ResumeCreate from "./Admin/Dashboard/Resume/Create";
 
 
 function App() {
@@ -51,6 +52,8 @@ function App() {
               <Route path="web-setting" element={<WebSetting />} />
               <Route path="web-setting-list" element={<WebSettingList />} />
               <Route path="admin/resume" element={<ResumeList />} />
+              <Route path="admin/resume/create" element={<ResumeCreate />} />
+              
               <Route path="admin/contact" element={<ContactList />} />
               <Route path="admin/contact/:id" element={<ContactShow />} />
               

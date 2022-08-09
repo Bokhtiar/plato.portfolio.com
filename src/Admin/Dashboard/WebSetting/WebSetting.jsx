@@ -65,7 +65,7 @@ const WebSetting = () => {
                                         setName(e.target.value)
                                     }}
                                     />
-                                </div>
+                                </div> 
                             </div>
 
                             <div className="col-md-8 col-lg-8 col-sm-12 my-2">

@@ -1,14 +1,28 @@
 import { useState } from "react"
 import { getServiceResumData } from "../../../Service/resume"
+import {Link} from 'react-router-dom'
+import axios from "axios"
 
 const ResumeList = () => {
 
     const [resumes, setResumes] = useState([])
     
+    /*servie retrive data */
     const resumeServiceData = async() => {
         const data = await getServiceResumData()
         setResumes(data)
     }
+
+    /*destroy funtion resume */
+    const resumeDelete = (id) => {
+        axios.delete(`/admin/resume/${id}`).then((response) => {
+            console.log(response.data.message)
+            resumeServiceData()
+        }).cache((error)=>{
+            console.log(error);
+        })
+    }
+
 
     useState(()=>{
         resumeServiceData()
@@ -17,8 +31,8 @@ const ResumeList = () => {
     return (
         <section>
             <div className="card">
-                <div className="card-header">
-                    <h3>Resume List</h3>
+                <div className="card-header form-inline">
+                    <h3>Resume List</h3> <Link className="ml-5 btn btn-primary text-light" to="/admin/resume/create">Resume Create</Link>
                 </div>
                 <div className="card-body">
                     <table class="table">
@@ -39,7 +53,7 @@ const ResumeList = () => {
                                     <td>{resume.type}</td>
                                     <td>
                                         <a className="btn btn-sm btn-success" href="">Edit</a>
-                                        <a className="btn btn-sm btn-danger" href="">Delete</a>
+                                        <button className="btn btn-sm btn-danger" onClick={()=>resumeDelete(resume._id)}>Delete</button>
                                     </td>
                                 </tr>
                                 )
