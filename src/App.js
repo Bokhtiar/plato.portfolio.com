@@ -53,6 +53,7 @@ function App() {
               <Route path="web-setting-list" element={<WebSettingList />} />
               <Route path="admin/resume" element={<ResumeList />} />
               <Route path="admin/resume/create" element={<ResumeCreate />} />
+              <Route path="admin/resume/edit/:id" element={<ResumeCreate />} />
               
               <Route path="admin/contact" element={<ContactList />} />
               <Route path="admin/contact/:id" element={<ContactShow />} />

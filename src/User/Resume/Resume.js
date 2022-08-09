@@ -32,7 +32,7 @@ export default function Index() {
                     resume.type == "profession" ?
                       <div className="timeline-wrapper">
                         <div className="timeline-yr">
-                          <span> <img className='icon-expe' src={resume.image} alt="svg image" />   </span>
+                          <span> {resume.date}   </span>
                         </div>
                         <div className="timeline-info">
                           <h3><span>{resume.title}</span><small>{resume.short_des}</small></h3>
@@ -42,15 +42,7 @@ export default function Index() {
                       : ""
                   )
                 }
-                <div className="timeline-wrapper">
-                  <div className="timeline-yr">
-                    <span><img className='icon-expe' src="./frontend/img/web.png" alt="svg image" /></span>
-                  </div>
-                  <div className="timeline-info">
-                    <h3><span>UX Designer</span><small>Digital Ace</small></h3>
-                    <p>Fusce rutrum augue id orci rhoncus molestie. Nunc auctor dignissim lacus vel iaculis.</p>
-                  </div>
-                </div>
+
 
               </div>
             </div>
@@ -59,35 +51,21 @@ export default function Index() {
               <h2 className="mb-4 mobile-mt-2">Educations</h2>
 
               <div className="timeline">
-                <div className="timeline-wrapper">
-                  <div className="timeline-yr">
-                    <span>2017</span>
-                  </div>
-                  <div className="timeline-info">
-                    <h3><span>Mobile Web</span><small>Master Design</small></h3>
-                    <p>Please tell your friends about Tooplate website. That would be very helpful. We need your support.</p>
-                  </div>
-                </div>
-
-                <div className="timeline-wrapper">
-                  <div className="timeline-yr">
-                    <span>2015</span>
-                  </div>
-                  <div className="timeline-info">
-                    <h3><span>User Interfaces</span><small>Creative Agency</small></h3>
-                    <p><a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a> is a great website to download HTML templates without any login or email.</p>
-                  </div>
-                </div>
-
-                <div className="timeline-wrapper">
-                  <div className="timeline-yr">
-                    <span>2013</span>
-                  </div>
-                  <div className="timeline-info">
-                    <h3><span>Artwork Design</span><small>New Art School</small></h3>
-                    <p>You can freely use Tooplate's templates for your business or personal sites. You cannot redistribute this template without a permission.</p>
-                  </div>
-                </div>
+                {
+                  resumes.map((edu, index) => 
+                    edu.type == "edu" ? 
+                    <div className="timeline-wrapper">
+                    <div className="timeline-yr">
+                      <span>{edu.date}</span>
+                    </div>
+                    <div className="timeline-info">
+                      <h3><span>{edu.title}</span><small>{edu.short_des}</small></h3>
+                      <p>{edu.long_des}.</p>
+                    </div>
+                    </div>
+                    : ""
+                  )
+                }
 
               </div>
             </div>

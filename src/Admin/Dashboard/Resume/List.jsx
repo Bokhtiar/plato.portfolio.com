@@ -52,7 +52,7 @@ const ResumeList = () => {
                                     <td>{resume.short_des}</td>
                                     <td>{resume.type}</td>
                                     <td>
-                                        <a className="btn btn-sm btn-success" href="">Edit</a>
+                                        <Link className="btn btn-sm btn-success" to={`/admin/resume/edit/${resume._id}`}  >Edit</Link>
                                         <button className="btn btn-sm btn-danger" onClick={()=>resumeDelete(resume._id)}>Delete</button>
                                     </td>
                                 </tr>
