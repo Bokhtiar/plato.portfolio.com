@@ -27,6 +27,13 @@ const AdminSidebar = () => {
                             <span>Contact</span>
                         </Link>
                     </li>
+ 
+                    <li className="nav-item">
+                        <Link className="nav-link collapsed" to="/admin/project">
+                            <i className="bi bi-file-earmark"></i>
+                            <span>Project</span>
+                        </Link>
+                    </li>
 
                     <li className="nav-item">
                         <Link className="nav-link collapsed" to="web-setting">
