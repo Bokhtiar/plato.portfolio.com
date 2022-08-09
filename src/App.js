@@ -23,6 +23,7 @@ import ContactShow from "./Admin/Dashboard/Contact/Show";
 import ResumeCreate from "./Admin/Dashboard/Resume/Create";
 import ProjectList from "./Admin/Dashboard/Project/List";
 import ProjectShow from "./Admin/Dashboard/Project/Show";
+import ProjectCreate from "./Admin/Dashboard/Project/Create";
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
 
               <Route path="admin/project" element={<ProjectList />} />
               <Route path="admin/project/:id" element={<ProjectShow />} />
+              <Route path="admin/project/create" element={<ProjectCreate />} />
               
               <Route path="admin/contact" element={<ContactList />} />
               <Route path="admin/contact/:id" element={<ContactShow />} />

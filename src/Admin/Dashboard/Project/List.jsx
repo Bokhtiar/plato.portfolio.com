@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getServiceProjectData } from "../../../Service/Project"
 import {Link} from 'react-router-dom'
+import axios from "axios"
 
 const ProjectList = () => {
     /*project data set*/
@@ -12,17 +13,28 @@ const ProjectList = () => {
         setProject(data)
     }
 
+    /**project delete */
+    const projectDelete = (id) => {
+        axios.delete(`/admin/portfolio/${id}`)
+                .then((response)=>{
+                    console.log(response.data.message)
+                    ProjectListData()
+                }).catch((error)=>{
+                    console.log(error)
+                })
+    }
+
     /*useEffect */
     useEffect(() => {
         ProjectListData()
     }, [])
-    console.log(projects)
+
 
     return (
         <section>
             <div className="card">
                 <div className="card-header form-inline">
-                    <h3>Project List</h3> <Link className="ml-5 btn btn-primary" to="">Create Project</Link>
+                    <h3>Project List</h3> <Link className="ml-5 btn btn-primary" to="/admin/project/create">Create Project</Link>
                 </div>
                 <div className="card-body">
                     <table class="table">
@@ -41,7 +53,7 @@ const ProjectList = () => {
                                         <td>{project.category ? project.category.name: ""}</td>
                                         <td>
                                             <Link to={`/admin/project/${project._id}`} className="btn btn-sm btn-primary">Show</Link>
-                                            <button className="btn btn-sm btn-danger">Delete</button>
+                                            <button className="btn btn-sm btn-danger" onClick={()=>projectDelete(project._id)}>Delete</button>
                                         </td>
                                     </tr>
                                 )
