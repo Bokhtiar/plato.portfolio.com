@@ -27,6 +27,8 @@ import ProjectCreate from "./Admin/Dashboard/Project/Create";
 import CategoryList from "./Admin/Dashboard/Category/List";
 import CategoryCreate from "./Admin/Dashboard/Category/Create";
 import ProjectDetail from "./User/Project/Show";
+import Project from "./User/Project/Project";
+import ContactCreate from "./User/Contact/Create";
 
 
 function App() {
@@ -45,6 +47,8 @@ function App() {
               <Route path="/blog/detail/:id" element={ <SingleBlog /> }></Route>
               <Route path="/about" element={ <About  /> }></Route>
               <Route path="/resume" element={ <Resume /> }></Route>
+              <Route path="/project" element={ <Project/> }></Route>
+              <Route path="/contact" element={ <ContactCreate/> }></Route>
               <Route path="/project/show/:id" element={ <ProjectDetail /> }></Route>
               <Route path="/admin/login" element={ <AdminLogin  /> }></Route>
           </Route>

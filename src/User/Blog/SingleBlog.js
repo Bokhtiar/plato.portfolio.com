@@ -19,7 +19,7 @@ export default function SingleBlog() {
     console.log(blog.title)
 	
   return (
-    <div>
+    <div style={{ marginTop: "100px" }}>
         <section id="blog" className="blog">
         <div className="container" data-aos="fade-up">
 

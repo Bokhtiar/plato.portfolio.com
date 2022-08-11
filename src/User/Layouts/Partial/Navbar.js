@@ -39,7 +39,7 @@ export default function () {
                         <Link to={"resume"} className="nav-link"><span data-hover="Resume">Resume</span></Link>
                     </li>
                     <li className="nav-item">
-                        <a href="#contact" className="nav-link"><span data-hover="Contact">Contact</span></a>
+                        <Link to={'/contact'} className="nav-link"><span data-hover="Contact">Contact</span></Link>
                     </li>
                     <li className="nav-item">
                     <Link to={"/blog"} className="nav-link"><span data-hover="Blog">Blog</span></Link>

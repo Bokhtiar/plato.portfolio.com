@@ -29,7 +29,7 @@ export default function Project() {
 
 
   return (
-    <div>
+    <div style={{ marginTop: "100px" }}>
     <section id="portfolio" class="portfolio">
     <div class="container">
 

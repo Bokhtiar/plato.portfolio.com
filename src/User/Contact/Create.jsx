@@ -45,7 +45,7 @@ const ContactCreate = () => {
     },[])
 
     return (
-        <section>
+        <section style={{ marginTop: "100px" }}>
             <section id="contact" class="contact my-5">
                 <div class="container">
 
@@ -112,7 +112,7 @@ const ContactCreate = () => {
                                     }}
                                     ></textarea>
                                 </div>
-                                <div class="text-center"><button type="submit">Send Message</button></div>
+                                <div class="text-center"><button style={{ background: "#f03c02", color:"white", borderRadius:"5px", border:"none", padding: "10px" }} type="submit">Send Message</button></div>
                             </form>
                         </div>
 

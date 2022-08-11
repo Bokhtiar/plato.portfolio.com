@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function About() {
   return (
-    <div>
+    <div style={{ marginTop: "100px" }}>
     <section id="about-us" className="about-us">
       <div className="container">
 

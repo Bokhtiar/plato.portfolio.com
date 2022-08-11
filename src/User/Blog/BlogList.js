@@ -14,7 +14,7 @@ export default function BlogList() {
   }
 
   return (
-    <div>
+    <div style={{ marginTop: "100px" }}>
       <section id="blog" className="blog">
       <div className="container" data-aos="fade-up">
 
