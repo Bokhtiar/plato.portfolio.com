@@ -70,7 +70,7 @@ const ProjectCreate = () => {
                             {title}
                             <label htmlFor="">Title</label>
                             <input type="text" className="form-control" placeholder="Title type here" name="" id=""
-                                onClick={(e)=> {
+                                onChange={(e)=> {
                                     setTitle(e.target.value)
                                 }}
                             />
@@ -95,7 +95,7 @@ const ProjectCreate = () => {
                         <div className="col-md-4 my-2">
                             <label htmlFor="">Project Url</label>
                             <input type="text" className="form-control" placeholder="Project Url type here" name="" id=""
-                                onClick={(e)=> {
+                                onChange={(e)=> {
                                     setProject_url(e.target.value)
                                 }}
                             />
@@ -104,7 +104,7 @@ const ProjectCreate = () => {
                         <div className="col-md-4 my-2">
                             <label htmlFor="">Project Client</label>
                             <input type="text" className="form-control" placeholder="Project Client type here" name="" id=""
-                                onClick={(e)=> {
+                                onChange={(e)=> {
                                     setClient_name(e.target.value)
                                 }}
                             />
@@ -113,7 +113,7 @@ const ProjectCreate = () => {
                         <div className="col-md-4 my-2">
                             <label htmlFor="">Project Start and End Time</label>
                             <input type="text" className="form-control" placeholder="project start time and end time" name="" id=""
-                                onClick={(e)=> {
+                                onChange={(e)=> {
                                     setStart_time(e.target.value)
                                 }}
                             />

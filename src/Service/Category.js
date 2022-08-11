@@ -8,3 +8,14 @@ export const getServiceCategoryData = async() =>{
     })
     return data
 }
+
+//user for category
+export const getServiceUserCategoryData = async() =>{
+    let data = [];
+    await axios.get('/user/category')
+    .then(response => {
+        data = response.data.data
+    })
+    return data
+}
+

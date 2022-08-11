@@ -6,7 +6,7 @@ export const getServiceProjectData = async() =>{
     .then(response => {
         data = response.data.data
     })
-    return data
+    return data 
 }
 
 export const getServiceSingleProject = async(props) =>{

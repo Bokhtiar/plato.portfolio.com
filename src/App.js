@@ -24,6 +24,8 @@ import ResumeCreate from "./Admin/Dashboard/Resume/Create";
 import ProjectList from "./Admin/Dashboard/Project/List";
 import ProjectShow from "./Admin/Dashboard/Project/Show";
 import ProjectCreate from "./Admin/Dashboard/Project/Create";
+import CategoryList from "./Admin/Dashboard/Category/List";
+import CategoryCreate from "./Admin/Dashboard/Category/Create";
 
 
 function App() {
@@ -61,7 +63,10 @@ function App() {
               <Route path="admin/project" element={<ProjectList />} />
               <Route path="admin/project/:id" element={<ProjectShow />} />
               <Route path="admin/project/create" element={<ProjectCreate />} />
-              
+              {/* category */}
+              <Route path="admin/category" element={<CategoryList />} />
+              <Route path="admin/category/create" element={<CategoryCreate />} />
+
               <Route path="admin/contact" element={<ContactList />} />
               <Route path="admin/contact/:id" element={<ContactShow />} />
               
