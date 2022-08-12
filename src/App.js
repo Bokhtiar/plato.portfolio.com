@@ -30,6 +30,8 @@ import ProjectDetail from "./User/Project/Show";
 import Project from "./User/Project/Project";
 import ContactCreate from "./User/Contact/Create";
 import AboutCreate from "./Admin/Dashboard/About/Create";
+import AboutList from "./Admin/Dashboard/About/List";
+import AboutEdit from "./Admin/Dashboard/About/Edit";
 
 
 function App() {
@@ -74,7 +76,9 @@ function App() {
               <Route path="admin/category" element={<CategoryList />} />
               <Route path="admin/category/create" element={<CategoryCreate />} />
               {/* about */}
-              <Route path="admin/about" element={<AboutCreate />} />
+              <Route path="admin/about/create" element={<AboutCreate />} />
+              <Route path="admin/about" element={<AboutList />} />
+              <Route path="admin/about/edit/:id" element={<AboutEdit />} />
 
               <Route path="admin/contact" element={<ContactList />} />
               <Route path="admin/contact/:id" element={<ContactShow />} />
