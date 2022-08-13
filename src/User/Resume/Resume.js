@@ -18,9 +18,9 @@ export default function Index() {
 
 
   return (
-    <div style={{ marginTop: "100px" }}>
+    <div style={{ }}>
       {/* FEATURES */}
-      <section className="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+      <section className="resume d-lg-flex justify-content-center align-items-center" id="resume">
         <div className="container">
           <div className="row">
 

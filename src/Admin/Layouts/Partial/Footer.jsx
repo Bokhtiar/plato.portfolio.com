@@ -2,7 +2,7 @@ const AdminFooter = () => {
     return (
         <section>
 
-            <footer id="footer" class="footer">
+            <footer id="" class="">
                 <div class="copyright">
                     &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
                 </div>

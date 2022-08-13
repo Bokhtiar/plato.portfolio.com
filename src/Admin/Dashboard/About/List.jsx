@@ -10,6 +10,7 @@ const AboutList = () => {
         const data = await getServiceAboutData()
         setAbout(data)
     }
+
     /**useEffect */
     useEffect(()=> {
         AboutListData()

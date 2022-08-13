@@ -16,7 +16,7 @@ export default function () {
 
   return ( 
     <div>
-        <nav className="navbar navbar-expand-sm navbar-light">
+        <nav className="navbar navbar-expand-sm navbar-light nav-top">
         <div className="container">
             <Link className="navbar-brand" to={"/"}> <img className='navbar-image' src={webSetting.logo}  alt="svg image"/> {webSetting.name}  </Link>
 
