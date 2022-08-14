@@ -1,6 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { getServiceAboutUserData } from '../../Service/About'
 
 export default function About() {
+
+  /**about useState */
+  const [about, setAbout] = useState([])
+
+  /**service form data */
+  const AboutListData = async() => {
+      const data = await getServiceAboutUserData()
+      setAbout(data)
+      console.log("frontend",data)
+  } 
+
+  useEffect(()=> {
+    AboutListData()
+  },[])
+
   return (
     <div style={{ marginTop: "100px" }}>
     <section id="about-us" className="about-us">
@@ -8,33 +24,33 @@ export default function About() {
 
         <div className="row no-gutters my-3">
           <div className=" col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start" data-aos="fade-right">
-          <img className='' src="./frontend/images/logo.jpg"  alt="svg image"/>
+          <img className='' src={about.image} width="100%" alt="svg image"/>
           </div>
           <div className="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch">
             <div className="content d-flex flex-column justify-content-center">
-              <h3 data-aos="fade-up">Voluptatem dignissimos provident quasi</h3>
+              <h3 data-aos="fade-up">{about.title}</h3>
               <p data-aos="fade-up">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                {about.body}
               </p>
               <div className="row">
                 <div className="col-md-6 icon-box" data-aos="fade-up">
                   <i className="bx bx-receipt"></i>
-                  <h4>Corporis voluptates sit</h4>
+                  <h4>{about.about1}</h4>
                   <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
                 </div>
                 <div className="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
                   <i className="bx bx-cube-alt"></i>
-                  <h4>Ullamco laboris nisi</h4>
+                  <h4>{about.about2}</h4>
                   <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
                 </div>
                 <div className="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
                   <i className="bx bx-images"></i>
-                  <h4>Labore consequatur</h4>
+                  <h4>{about.about3}</h4>
                   <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
                 </div>
                 <div className="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
                   <i className="bx bx-shield"></i>
-                  <h4>Beatae veritatis</h4>
+                  <h4>{about.about4}</h4>
                   <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
                 </div>
               </div>
@@ -45,57 +61,6 @@ export default function About() {
       </div>
     </section>
 
-
-    <section id="services" class="services my-5">
-      <div class="container">
-        <h1 className='text-center'>Awesome Quality Services</h1>
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box" data-aos="fade-up">
-              <div class="icon"><i class="bi bi-briefcase"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="bi bi-card-checklist"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="bi bi-bar-chart"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="bi bi-binoculars"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="bi bi-brightness-high"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-              <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
 
  
     <section id="skills" className="skills my-5">

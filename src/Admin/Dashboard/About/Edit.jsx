@@ -51,9 +51,9 @@ const AboutEdit = () => {
         formData.append("about2", about2)
         formData.append("about3", about3)
         formData.append("about4", about4)
-        formData.append("image", updateImage)
+        formData.append("image", image ? image : updateImage)
 
-        axios.post('/admin/about', formData)
+        axios.put(`/admin/about/${id}`, formData)
             .then((res)=> {
                 console.log(res.data.message)
                 navigate('/admin/about')

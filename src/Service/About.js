@@ -19,3 +19,14 @@ export const getServiceAboutShowData = async(id) =>{
         })
     return data
 }
+
+
+export const getServiceAboutUserData = async() =>{
+    let data = [];
+    await axios.get('/user/about')
+    .then(response => {
+        data = response.data.data[0]
+        console.log('user about', data)
+    })
+    return data
+}
