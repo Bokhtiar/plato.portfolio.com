@@ -68,7 +68,7 @@ export default function BlogList() {
 
           <div className="col-lg-4">
 
-            <div className="sidebar" >
+            <div className="sidebars" >
 
               <h3 className="sidebar-title">Search</h3>
               <div className="sidebar-item search-form">

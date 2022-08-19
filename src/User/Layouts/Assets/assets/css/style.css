@@ -1609,12 +1609,12 @@ section {
 .blog .blog-pagination li.active a, .blog .blog-pagination li:hover a {
   color: #fff;
 }
-.blog .sidebar {
+.blog .sidebars {
   padding: 30px;
   margin: 0 0 60px 20px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
-.blog .sidebar .sidebar-title {
+.blog .sidebars .sidebars-title {
   font-size: 20px;
   font-weight: 700;
   padding: 0 0 0 0;
@@ -1622,22 +1622,22 @@ section {
   color: #2b2320;
   position: relative;
 }
-.blog .sidebar .sidebar-item {
+.blog .sidebars .sidebars-item {
   margin-bottom: 30px;
 }
-.blog .sidebar .search-form form {
+.blog .sidebars .search-form form {
   background: #fff;
   border: 1px solid #ddd;
   padding: 3px 10px;
   position: relative;
 }
-.blog .sidebar .search-form form input[type=text] {
+.blog .sidebars .search-form form input[type=text] {
   border: 0;
   padding: 4px;
   border-radius: 4px;
   width: calc(100% - 40px);
 }
-.blog .sidebar .search-form form button {
+.blog .sidebars .search-form form button {
   position: absolute;
   top: 0;
   right: 0;
@@ -1653,68 +1653,68 @@ section {
   border-radius: 0 4px 4px 0;
   line-height: 0;
 }
-.blog .sidebar .search-form form button i {
+.blog .sidebars .search-form form button i {
   line-height: 0;
 }
-.blog .sidebar .search-form form button:hover {
+.blog .sidebars .search-form form button:hover {
   background: #fd4509;
 }
-.blog .sidebar .categories ul {
+.blog .sidebars .categories ul {
   list-style: none;
   padding: 0;
 }
-.blog .sidebar .categories ul li + li {
+.blog .sidebars .categories ul li + li {
   padding-top: 10px;
 }
-.blog .sidebar .categories ul a {
+.blog .sidebars .categories ul a {
   color: #2b2320;
   transition: 0.3s;
 }
-.blog .sidebar .categories ul a:hover {
+.blog .sidebars .categories ul a:hover {
   color: #f03c02;
 }
-.blog .sidebar .categories ul a span {
+.blog .sidebars .categories ul a span {
   padding-left: 5px;
   color: #b4aca8;
   font-size: 14px;
 }
-.blog .sidebar .recent-posts .post-item + .post-item {
+.blog .sidebars .recent-posts .post-item + .post-item {
   margin-top: 15px;
 }
-.blog .sidebar .recent-posts img {
+.blog .sidebars .recent-posts img {
   width: 80px;
   float: left;
 }
-.blog .sidebar .recent-posts h4 {
+.blog .sidebars .recent-posts h4 {
   font-size: 15px;
   margin-left: 95px;
   font-weight: bold;
 }
-.blog .sidebar .recent-posts h4 a {
+.blog .sidebars .recent-posts h4 a {
   color: #2b2320;
   transition: 0.3s;
 }
-.blog .sidebar .recent-posts h4 a:hover {
+.blog .sidebars .recent-posts h4 a:hover {
   color: #f03c02;
 }
-.blog .sidebar .recent-posts time {
+.blog .sidebars .recent-posts time {
   display: block;
   margin-left: 95px;
   font-style: italic;
   font-size: 14px;
   color: #b4aca8;
 }
-.blog .sidebar .tags {
+.blog .sidebars .tags {
   margin-bottom: -10px;
 }
-.blog .sidebar .tags ul {
+.blog .sidebars .tags ul {
   list-style: none;
   padding: 0;
 }
-.blog .sidebar .tags ul li {
+.blog .sidebars .tags ul li {
   display: inline-block;
 }
-.blog .sidebar .tags ul a {
+.blog .sidebars .tags ul a {
   color: #745f56;
   font-size: 14px;
   padding: 6px 14px;
@@ -1723,12 +1723,12 @@ section {
   display: inline-block;
   transition: 0.3s;
 }
-.blog .sidebar .tags ul a:hover {
+.blog .sidebars .tags ul a:hover {
   color: #fff;
   border: 1px solid #f03c02;
   background: #f03c02;
 }
-.blog .sidebar .tags ul a span {
+.blog .sidebars .tags ul a span {
   padding-left: 5px;
   color: #c8bab5;
   font-size: 14px;

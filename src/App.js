@@ -32,6 +32,7 @@ import ContactCreate from "./User/Contact/Create";
 import AboutCreate from "./Admin/Dashboard/About/Create";
 import AboutList from "./Admin/Dashboard/About/List";
 import AboutEdit from "./Admin/Dashboard/About/Edit";
+import AdminBlogList from "./Admin/Dashboard/Blog/List";
 
 
 function App() {
@@ -79,7 +80,8 @@ function App() {
               <Route path="admin/about/create" element={<AboutCreate />} />
               <Route path="admin/about" element={<AboutList />} />
               <Route path="admin/about/edit/:id" element={<AboutEdit />} />
-
+              {/* blog */}
+              <Route path="admin/blog" element={<AdminBlogList />} />
               <Route path="admin/contact" element={<ContactList />} />
               <Route path="admin/contact/:id" element={<ContactShow />} />
               

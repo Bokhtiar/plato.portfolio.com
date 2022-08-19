@@ -2,6 +2,16 @@ import axios from "axios";
 
 export const getServiceBlogData = async() =>{
     let data = [];
+    await axios.get('/admin/blog')
+    .then(response => {
+        data = response.data.data
+    })
+    return data
+}
+
+/**user **/
+export const getServiceBlogUserData = async() =>{
+    let data = [];
     await axios.get('https://fakestoreapi.com/products')
     .then(response => {
         data = response.data
