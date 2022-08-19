@@ -55,6 +55,7 @@ const CategoryCreate = () => {
                                 setType(e.target.value)
                             }}
                             >
+                                <option value="">--Select Item--</option>
                                 <option value="blog">Blog</option>
                                 <option value="project">Project</option>
                             </select>
